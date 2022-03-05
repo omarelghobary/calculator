@@ -55,9 +55,40 @@ function clearVar(name = ''){
 }
 
 function doMath(){
-    if (lastOperation = 'x')
+    if (lastOperation === 'x')
         result = parseFloat(result) * parseFloat(numberTwoDisplay);
+    else if (lastOperation === '+')
+        result = parseFloat(result) + parseFloat(numberTwoDisplay);
+    else if (lastOperation === '-')
+        result = parseFloat(result) - parseFloat(numberTwoDisplay);
+    else if (lastOperation === '/')
+        result = parseFloat(result) / parseFloat(numberTwoDisplay);
 }
+
+equalButton.addEventListener('click', (e) =>{
+    if(!numberOneDisplay || !numberTwoDisplay) return;
+    haveDot =false;
+    doMath();
+    clearVar();
+    secondScreen.innerText = result;
+    tempScreen.innerText = '';
+    numberTwoDisplay = result;
+    numberOneDisplay = '';
+});
+
+clearButton.addEventListener('click', (e) => {
+    firstScreen.innerText ='0';
+    secondScreen.innerText = '0';
+    numberOneDisplay = '';
+    numberTwoDisplay = '';
+    result = '';
+    tempScreen.innerText = '0';
+});
+
+deleteButton.addEventListener('click', (e) =>{
+    secondScreen.innerText = '';
+    numberTwoDisplay = '';
+});
 
  
 // for console
