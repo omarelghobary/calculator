@@ -9,14 +9,14 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to left, rgb(111, 111, 239), rgb(118, 45, 155));
+    background: linear-gradient(to left, rgb(251, 251, 251), rgb(55, 55, 55));
 }
 
 #calculator{
     display: grid;
     grid-template-columns: repeat(4,6rem);
     grid-template-rows: minmax(7rem, auto) repeat(4, 6rem) ;
-    background-color: rgb(213, 148, 220);
+    background-color: #f4f4f4;
     grid-gap: 2px;
     padding: 10px;
     border-radius: 10px;
@@ -32,12 +32,27 @@
     word-wrap: break-word;
     word-break: break-all;
     border-radius: 10px;
-    background-color: rgb(228, 205, 232);
+    font-size: 2rem;
+    color: aliceblue;
+    background-color:rgb(79, 78, 78);
 }
 
-.equals{
+.first-screen{
+    opacity: .4;    
+    font-size: 20px;
+}
+
+.temp-screen{
+    align-self: flex-start;
+    opacity: .4;
+}
+
+
+.equal{
     grid-column: 3/5;
     grid-row: 6/7;
+    
+    
 }
 
 .clear{
@@ -48,9 +63,9 @@
 button{
     cursor: pointer;
     font-size: 2rem;
-    border: 2px solid rgb(188, 74, 74);
+    border: 2px solid rgba(132, 133, 133, 0.325);
     outline: none;
-    background-color: rgb(240, 234, 252);
+    background-color: rgb(195, 225, 244);
     border-radius: 10%;
 }
 
@@ -64,8 +79,10 @@ button:focus{
 }
 
 .operation{
-    background-color: rgb(249, 164, 215);
+    background-color: rgb(196, 194, 196);
 }
+
+
 
 
 
