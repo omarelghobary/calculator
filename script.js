@@ -61,8 +61,10 @@ function doMath(){
         result = parseFloat(result) + parseFloat(numberTwoDisplay);
     else if (lastOperation === '-')
         result = parseFloat(result) - parseFloat(numberTwoDisplay);
-    else if (lastOperation === '/')
+    else if (lastOperation === '/'){
+        if (numberTwoDisplay == '0') alert(' Dividing by 0 is undefinied');
         result = parseFloat(result) / parseFloat(numberTwoDisplay);
+    }
 }
 
 equalButton.addEventListener('click', (e) =>{
@@ -89,6 +91,8 @@ deleteButton.addEventListener('click', (e) =>{
     secondScreen.innerText = '';
     numberTwoDisplay = '';
 });
+
+
 
  
 // for console
