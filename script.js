@@ -62,7 +62,7 @@ function doMath(){
     else if (lastOperation === '-')
         result = parseFloat(result) - parseFloat(numberTwoDisplay);
     else if (lastOperation === '/'){
-        if (numberTwoDisplay == '0') alert(' Dividing by 0 is undefinied');
+        if (numberTwoDisplay == '0') alert('Error: Dividing by 0 is undefinied');
         result = parseFloat(result) / parseFloat(numberTwoDisplay);
     }
 }
